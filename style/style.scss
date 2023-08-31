@@ -1,0 +1,101 @@
+body {
+    margin: 0px;
+}
+
+@keyframes rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.container {
+    display: flex;
+    margin: 150px;
+    background-color: rgb(54, 54, 54);
+    padding: 50px ;
+    align-items: center;
+
+    .screen {
+
+        .ventyl {
+            width: 300px;
+            height: 300px;
+            border-radius: 100%;
+            animation-name: rotating; 
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        .rotatinglvl1 {
+            animation-duration: 2s;      
+        } 
+        .rotatinglvl2 {           
+            animation-duration: 1s;
+        } 
+        .rotatinglvl3 {
+            animation-duration: 0.4s;
+        } 
+        .run {
+            animation-direction: normal;
+        }
+        .pause {
+            animation-play-state: paused;
+        }
+        .reverse {
+            animation-direction: reverse;
+        }
+    }
+
+    .button1 {
+        display: flex;    
+        margin-left: 100px;     
+        
+        * {
+            width: 100px;
+            height: 100px;
+            border: black solid 3px;
+            background-color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+            &:nth-child(2) {
+                background-color: red;
+                color: white;
+            }
+            &:hover {
+                border: 5px rgb(85, 85, 66) solid;
+                cursor: pointer;
+            }
+        }
+    }
+    .speeds {
+        display: flex;   
+        margin-left: 100px;
+        
+        * {
+            width: 100px;
+            height: 100px;
+            border: black solid 3px;
+            background-color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+            &:hover {
+                border: 5px rgb(66, 85, 68) solid;
+                cursor: pointer;
+            }
+        }
+    }
+
+}
+
